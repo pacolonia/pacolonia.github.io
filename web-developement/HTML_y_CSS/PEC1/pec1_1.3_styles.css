@@ -1,0 +1,14 @@
+h2{
+  font-family: georgia, serif;
+  width: 650px;
+  margin-left: 40pt;
+}
+code{
+  font-family: "Courier", monospace;
+}
+pre{
+  width: 650px;
+  margin-left: 0 auto;
+  color: blue;
+  font-size: 0.9em;
+}

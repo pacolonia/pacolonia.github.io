@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- UOC: HTML y CSS. PEC2 -->
+
+<head>
+  <title>RuralRooms - Reserva de habitaciones</title>
+  <meta charset="utf-8">
+  <meta name="description" content="RuralRooms: alquiler de alojamientos rurales">
+  <meta name="keywords" content="rural, habitaciones, casa, alojamiento, reserva">
+  <link rel="stylesheet" href="css/estilos.css" type="text/css" media="screen">
+</head>
+
+<body>
+  <header>
+    <nav class="wrapper">
+      <a href="index.html"><img src="./img/RRLogo.png" alt="logo" id="logo" /></a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li class="current">Reserva</li>
+      </ul>
+    </nav>
+  </header>
+  <section id="reserva">
+    <div class="wrapper">
+    <h1>Reserve su habitación en Rural Rooms</h1>
+    <form>
+      <ul class="main">
+        <li>Datos personales:
+          <ul>
+            <li>
+              <label for="formOfAddress">Tratamiento:</label>
+              <select name="formOfAddress" id="formOfAddress">
+                <option value="sr">Sr</option>
+                <option value="sra">Sra</option>
+                <option value="srta">Srta</option></select></li>
+            <li>
+              <label for="name">Nombre:</label>
+              <input type="text" placeholder="Juan" name="name" class="required" id="name" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="name">Apellidos:</label>
+              <input type="text" placeholder="Pérez García" name="surnames" class="required" id="surnames" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="telephone">Teléfono:</label>
+              <input type="tel" name="telephone" id="telephone" value="" /></li>
+            <li>
+              <label for="email">Correo electrónico:</label>
+              <input type="email" name="email" class="required" id="email" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="cemail">Confirmar correo electrónico:</label>
+              <input type="email" name="cemail" class="required" id="cemail" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" id="password" value="" /></li>
+          </ul></li>
+        <li>Reserva:
+          <ul>
+            <li>
+              <label for="room">Tipo de habitación:</label>
+              <select name="room" class="required" id="room">
+                <option value="single">individual</option>
+                <option value="double">doble</option>
+                <option value="doubleSup">doble superior</option>
+                <option value="triple">triple</option></select>
+                <span class="note">*</span></li>
+            <li>
+              <label for="people">Número de personas:</label>
+              <input type="number" min="1" max="5" name="people" class="required" id="people" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="check-in">Fecha de entrada:</label>
+              <input type="date" name="check-in" class="required" id="check-in" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="check-out">Fecha de salida:</label>
+              <input type="date" name="check-out" class="required" id="check-out" value="" required="" />
+              <span class="note">*</span></li>
+            <li>
+              <label for="requests">Peticiones:</label>
+              <textarea name="requests" id="requests" cols="35" rows="5"></textarea>
+              <p>Las peticiones no las podemos garantizar pero haremos todo lo posible por satisfacerlas</p>
+            </li>
+          </ul></li>
+          <li>Datos adicionales:
+            <ul>
+              <li>
+                <label for="parking">Reservar plaza de aparcamiento cubierto (8€ por noche)</label>
+                <input type="checkbox" name="parking" id="parking" /></li>
+              <li>
+                <label for="arrival">Hora prevista de llegada:</label>
+                <input type="time" name="arrival" id="arrival" /></li>
+              <li>
+                <label for="breakfast">Reservar desayuno (5€ por día)</label>
+                <input type="checkbox" name="breakfast" id="breakfast" /></li>
+              </ul></li>
+          <li><input type="submit" value="Enviar" class="buttons" /></li>
+      </ul>
+    </form>
+    </div>
+  </section>
+  <footer>
+    <div class="wrapper">
+    <p>Actividad realizada por: <span id="author">Francisco Bosch Martínez</span></p>
+    <p>Fotografías de la portada <a href="https://unsplash.com/">Unsplash</a>
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="licence" src="./img/creative-commons.png"></a></p></div>
+  </footer>
+</body>
+</html>

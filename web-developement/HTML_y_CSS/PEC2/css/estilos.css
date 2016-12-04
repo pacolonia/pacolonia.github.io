@@ -1,0 +1,245 @@
+/* Declaraciones globales
+==========================*/
+*{
+  margin: 0;
+  padding:0;
+}
+
+body{
+  width: auto;
+  height: auto;
+  font-family: "HelvLight", Helvetica, sans-serif;
+}
+
+header{
+  background-color: #228B22;
+  padding-top: 2.5em;
+  border-bottom: 5px solid #696969;
+  color: white;
+  height: 4em;
+}
+
+.wrapper{
+  width: 82%;
+  margin: 0 auto;
+}
+
+nav ul{
+  list-style-type: none;
+  float: right;
+  margin-right: 8em;
+  /*display: inline;*/
+}
+
+/*nav ul li.logo{
+  background: #228B22 url('../img/RRLogo.png') no-repeat left top;
+  content: url('../img/RRLogo.png');
+}*/
+
+nav ul li {
+  display: inline;
+  /*float: right;*/
+  padding-left:5em;
+  font-size: 1.5em;
+}
+
+nav a:link, nav a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active{
+  color: #E9967A;
+  text-decoration: none;
+  -webkit-transition: all .3s; /* Safari, Chrome */
+     -moz-transition: all .3s; /* Firefox */
+          transition: all .3s;
+}
+
+li.current{
+  color: white;
+}
+
+footer{
+  background-color: #228B22;
+  border-top: 5px solid #696969;
+  padding-top: 1.5em;
+  font-size: 1.1em;
+}
+
+footer p{
+  padding-bottom: 1.5em;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+#logo{
+  float: left;
+  margin-top: -1.5em;
+}
+
+#author{
+  font-weight: bold;
+}
+
+
+/* Página de inicio
+==========================*/
+section#index{
+  background: #FFFFFF url('../img/fondoindex.jpg') no-repeat left center;
+  height: 45em;
+  width: auto;
+  background-size: 120em 45em;
+  color: #228B22;
+  margin-left: -10em;
+}
+
+section div.wrapper > *{
+  padding-top: 1.7em;
+}
+
+section#index h1{
+  font-size: 4.5em;
+  padding-left: 2em;
+}
+
+section#index h2{
+  font-size: 2.25em;
+  padding-left: 4em;
+}
+
+
+
+/* Página de precios
+==========================*/
+section#precios{
+  background-color: #F8F8FF;
+  width: auto;
+  padding-bottom: 3em;
+}
+
+div.center > *{
+  width: 65%;
+  margin: 0 auto;
+}
+
+section#precios h1{
+  font-size: 2.9em;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+table{
+  width: 77%;
+  border: 1px solid  #D3D3D3;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+td{
+  font-size: 12px;
+  font-weight: normal;
+  border-collapse: collapse;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 0.8em;
+  height: 30px;
+}
+
+th, tfoot, tfoot td{
+  font-weight: normal;
+  background-color: #708090;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 0.8em;
+  height: 30px;
+}
+
+th#top-left{
+  border-top-left-radius: 5px;
+}
+
+th#top-right{
+  border-top-right-radius: 5px;
+}
+
+tfoot tr td{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+tr.odd{
+  background-color: #B0C4DE;
+}
+
+td.first-column{
+  border-bottom: none;
+  font-weight: bold;
+}
+
+td.last-column{
+  text-align: right;
+  width: 11%;
+}
+
+/* Página de reserva
+==========================*/
+section#reserva h1{
+  font-size: 3em;
+  margin-top: -1em;
+  margin-bottom: .2em;
+}
+
+section#reserva p{
+  font-size: 14px;
+  color: gray;
+  font-style: italic;
+  text-align: right;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  margin-bottom: .5em;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+ul.main > li{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul.main ul{
+  margin-top: .5em;
+}
+
+form{
+  margin-bottom: 2em;
+  padding: 2em;
+  width: 55em;
+  background-color: #DCDCDC;
+}
+
+label {
+	display: block;
+	float: left;
+	clear: left;
+	width: 20em;
+	overflow: auto;
+	padding-right: 2em;
+	text-align: right;
+}
+
+input.buttons{
+  height: 6em;
+  font-size: 20px;
+}

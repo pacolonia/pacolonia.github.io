@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- UOC: HTML y CSS. PEC2 -->
+
+<head>
+  <title>RuralRooms - Precios de alojamiento</title>
+  <meta charset="utf-8">
+  <meta name="description" content="RuralRooms: alquiler de alojamientos rurales">
+  <meta name="keywords" content="rural, habitaciones, casa, alojamiento, precios">
+  <link rel="stylesheet" href="css/estilos.css" type="text/css" media="screen">
+</head>
+
+<body>
+  <header>
+    <nav class="wrapper">
+      <a href="index.html"><img src="./img/RRLogo.png" alt="logo" id="logo" /></a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="current">Precios</li>
+        <li><a href="reserva.html">Reserva</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="precios">
+    <div class="center">
+    <h1>Rural Rooms: Características y precios</h1>
+    <table>
+      <thead>
+        <tr>
+          <th id="top-left">Tipo de habitación</th>
+          <th>Personas</th>
+          <th>Características</th>
+          <th id="top-right">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td class="first-column">Habitación individual</td>
+          <td><img src="./img/individual.png" alt="una persona" /></td>
+          <td>Baño compartido, 20m2, Microondas</td>
+          <td class="last-column">70 €</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="first-column">Habitación doble (1 ó 2 camas)</td>
+          <td><img src="./img/doble.png" alt="dos personas" /></td>
+          <td rowspan="2">Baño privado, 30m2, Microondas</td>
+          <td class="last-column">120 €</td>
+        </tr>
+        <tr>
+          <td><img src="./img/individual.png" alt="una persona" /></td>
+          <td class="last-column">90 €</td>
+        </tr>
+        <tr class="odd">
+          <td class="first-column">Habitación doble superior</td>
+          <td><img src="./img/doble.png" alt="dos personas" /></td>
+          <td>Baño privado, 35m2, Zona de cocina, Cama doble</td>
+          <td class="last-column">140 €</td>
+        </tr>
+        <tr>
+          <td rowspan="3" class="first-column">Habitación triple (1, 2 ó 3 camas)</td>
+          <td><img src="./img/triple.png" alt="tres personas" /></td>
+          <td rowspan="3">Baño privado, 40m2, Zona de cocina</td>
+          <td class="last-column">150 €</td>
+        </tr>
+        <tr>
+          <td><img src="./img/doble.png" alt="dos personas" /></td>
+          <td class="last-column">130 €</td>
+        </tr>
+        <tr>
+          <td><img src="./img/individual.png" alt="una persona" /></td>
+          <td class="last-column">100 €</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Características comunes: WiFi gratis / TV de pantalla plana
+            / Aire acondicionado</td>
+        </tr>
+      </tfoot>
+    </table>
+    </div>
+  </section>
+  <footer>
+    <div class="wrapper">
+    <p>Actividad realizada por: <span id="author">Francisco Bosch Martínez</span></p>
+    <p>Fotografías de la portada <a href="https://unsplash.com/">Unsplash</a>
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="licence" src="./img/creative-commons.png"></a></p></div>
+  </footer>
+</body>
+</html>
