@@ -64,7 +64,7 @@ footer ul {
 
 .foot {
   box-sizing: border-box;
-  height: 5em;
+  height: 6em;
   background-color: #0A64A4;
   float: left;
   text-align: center;
@@ -84,7 +84,7 @@ footer ul {
 
 #foot3 {
   width: 33%;
-  height: 5em;
+  height: 6em;
   float: right;
   margin-left: -100%;
 }
