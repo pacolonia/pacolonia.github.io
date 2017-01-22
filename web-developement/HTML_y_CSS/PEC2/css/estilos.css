@@ -188,6 +188,7 @@ td.last-column{
   width: 11%;
 }
 
+
 /* Página de reserva
 ==========================*/
 section#reserva h1{
@@ -229,7 +230,7 @@ form{
   background-color: #DCDCDC;
 }
 
-label {
+label{
 	display: block;
 	float: left;
 	clear: left;
@@ -237,6 +238,22 @@ label {
 	overflow: auto;
 	padding-right: 2em;
 	text-align: right;
+}
+
+fieldset{
+	border: 0 !important;
+}
+
+fieldset label{
+  display: inline;
+  float: none;
+  padding-right: 4px;
+  padding-left: .572em;
+  text-align: left;
+}
+
+select{
+  font-family: Futura, 'Centrury Gothic', sans-serif;
 }
 
 input.buttons{

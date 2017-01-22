@@ -1,0 +1,320 @@
+/********** Estilos comunes **********/
+/*************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 40em;
+  max-width: 112em;
+  margin: 0 auto;
+  background-color: #65A5D1;
+  font-family: "Verdana", Arial, sans-serif;
+}
+
+h2, h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+header {
+  background-color: #24577B;
+  width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header span {
+  color: white;
+  font-family: "Gill Sans MT", Verdana, sans-serif;
+  font-size: 4em;
+}
+
+header a:link, header a:visited, header a:hover, header a:active {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: block;
+  float: right;
+  color: white;
+  font-family: "Geneva", Verdana, sans-serif;
+  font-size: 1.5em;
+  padding-top: 3em;
+}
+
+footer {
+  clear: both;
+  background-color: #65A5D1;
+  width: 90%;
+  min-width: 40em;
+  max-width: 112em;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.foot {
+  box-sizing: border-box;
+  height: 5em;
+  background-color: #0A64A4;
+  float: left;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#foot1 {
+  width: 33%;
+}
+
+#foot2 {
+  min-width: 34%;
+  max-width: auto;
+  border-left: 5px solid #65A5D1;
+  border-right: 5px solid #65A5D1;
+}
+
+#foot3 {
+  width: 33%;
+  height: 5em;
+  float: right;
+  margin-left: -100%;
+}
+
+#author {
+  clear: both;
+  height: 2em;
+  line-height: 2em;
+  text-align: left;
+  margin-left: 1em;
+  color: white;
+}
+
+#foot2 ul li {
+  padding-bottom: .5em;
+}
+
+#foot3 a {
+  margin-right: 10px;
+}
+
+/********** Estilos de index **********/
+/**************************************/
+
+#main_index h1 {
+  width: auto;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  vertical-align: middle;
+  color: #65A5D1;
+  background: url('../img/bg-inicio.jpg') no-repeat left bottom;
+  background-size: 100% 15em;
+  font-family: "American Typewriter", Georgia, serif;
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin: 0;
+}
+
+#body_index {
+  width: 90%;
+  min-height: 35em;
+  margin: 0 auto;
+  background-color: inherit;
+  padding-bottom: 1em;
+}
+
+#body_index a {
+  padding-top: 1em;
+}
+
+h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.col {
+  box-sizing: border-box;
+}
+
+.col img {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+}
+
+#col1 {
+  width: 33%;
+  float: left;
+}
+
+#col2 {
+  float: left;
+  max-width: 33%;
+}
+
+#col3 {
+  width: 33%;
+  float: right;
+  margin-left: -100%;
+}
+
+/********** Estilos de destinos********/
+/**************************************/
+
+.wrapper_destinos {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#body_pascua {
+  width: 48em;
+  float: left;
+  padding-bottom: 1em;
+  padding-top: 2em;
+}
+
+#body_pascua img {
+  width: 48em;
+}
+
+#body_pascua h3 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#side_viajeros {
+  width: 15em;
+  float: right;
+  padding-top: 2em;
+}
+
+#side_viajeros h3 {
+  font-size: 18pt;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#side_viajeros ul {
+  list-style-type: none;
+}
+
+#side_viajeros li {
+  padding-bottom: 5px;
+  font-size: 14pt;
+}
+
+
+#side_viajeros a:link, #side_viajeros a:visited, #side_viajeros a:hover, #side_viajeros a:active {
+  color: white;
+  text-decoration: none;
+}
+
+#side_viajeros a#current_link {
+  color: #0A64A4;
+}
+
+
+/********** Estilos de viajeros********/
+/**************************************/
+
+.wrapper_viajeros {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#body_marco {
+  width: 48em;
+  float: left;
+  padding-bottom: 1em;
+  padding-top: 2em;
+}
+
+#body_marco img {
+  width: 48em;
+}
+
+#body_marco h3 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#side_autor {
+  width: 15em;
+  float: right;
+  padding-top: 3em;
+  position: relative;
+  right: 4em;
+  font-size: 12pt;
+}
+
+#side_autor img {
+  width: 180px;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+#side_autor h3 {
+  font-size: 18pt;
+  padding-bottom: 1em;
+}
+
+#side_oviajeros {
+  width: 15em;
+  float: right;
+  padding-top: 3em;
+  position: relative;
+  right: 4em;
+}
+
+#side_oviajeros ul {
+  list-style-type: none;
+}
+
+#side_oviajeros li {
+  padding-bottom: 5px;
+  font-size: 14pt;
+}
+
+#side_oviajeros a:link, #side_oviajeros a:visited, #side_oviajeros a:hover, #side_oviajeros a:active {
+  text-decoration: none;
+  color: white;
+}
+
+#side_oviajeros a#current_link {
+  color: #0A64A4;
+}
+
+
+#side_oviajeros h3 {
+  font-size: 18pt;
+  padding-bottom: 1em;
+}
+
+
+/********** Estilos de útiles**********/
+/**************************************/
+
+#body_utiles {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#body_utiles h2 {
+  text-align: center;
+}
+
+#body_utiles ol, #body_utiles ul {
+  text-align: center;
+  list-style-type: none;
+}

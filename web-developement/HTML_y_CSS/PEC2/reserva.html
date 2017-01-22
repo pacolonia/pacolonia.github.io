@@ -69,9 +69,19 @@
                 <option value="triple">triple</option></select>
                 <span class="note">*</span></li>
             <li>
+              <!--
               <label for="people">Número de personas:</label>
               <input type="number" min="1" max="5" name="people" class="required" id="people" value="" required="" />
               <span class="note">*</span></li>
+              -->
+              <label for="people">Número de personas:</label>
+              <fieldset>
+                <label for="one">1</label><input type="radio" name="number_p" id="one" class="rInput" />
+                <label for="one">2</label><input type="radio" name="number_p" id="two" class="rInput" />
+                <label for="one">3</label><input type="radio" name="number_p" id="three" class="rInput" />
+                <label for="one">4</label><input type="radio" name="number_p" id="four" class="rInput" />
+                <label for="one">5</label><input type="radio" name="number_p" id="five" class="rInput" />
+              </fieldset>
             <li>
               <label for="check-in">Fecha de entrada:</label>
               <input type="date" name="check-in" class="required" id="check-in" value="" required="" />
