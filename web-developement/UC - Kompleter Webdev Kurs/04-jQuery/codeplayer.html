@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>CodePlayer</title>
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 50px;
+            padding: .5em;
+            background-color: lightgray;
+            border-bottom: 1px solid grey;
+        }
+
+        #logo {
+            width: 150px;
+            float: left;
+            margin-top: 0.3em;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .column-bar {
+            margin-left: 22.5%;
+            margin-right: 22.5%;
+        }
+
+        #run {
+            width: 70px;
+            height: 35px;
+            border-radius: 4px;
+            margin-right: 1em;
+            font-size: large;
+            float: right;
+        }
+
+        #run:hover {
+            border: 1px solid #227EFA;
+        }
+
+        #codeContainer {
+            clear: both;
+            width: 100%;
+        }
+
+        label.ui-checkboxradio-label {
+            border-color: gray;
+            background: lightgray;
+        }
+
+        label.ui-checkboxradio-checked {
+            border-color: gray;
+            background: gray;
+        }
+
+        .column {
+            box-sizing: border-box;
+            margin: 0;
+            float: left;
+            width: 25%;
+            height: 100%;
+            position: relative;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .tag {
+            min-width: 5px;
+            border: 1px solid gray;
+            border-radius: 2px;
+            padding: .3em;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            right: 1em;
+        }
+
+        textarea,
+        iframe {
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            resize: none;
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 1em;
+            border-right: 1px solid gray;
+        }
+
+        iframe {
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="navbar">
+            <div id="logo">
+                <h3>CodePlayer</h3>
+            </div>
+            <div class="column-bar">
+                <label for="html">HTML</label>
+                <input type="checkbox" name="col" id="html" class="toggle" value="HTML" checked>
+                <label for="css">CSS</label>
+                <input type="checkbox" name="col" id="css" class="toggle" value="CSS" checked>
+                <label for="js">JS</label>
+                <input type="checkbox" name="col" id="js" class="toggle" value="JS" checked>
+                <label for="result">Result</label>
+                <input type="checkbox" name="col" id="result" class="toggle" value="Result" checked>
+            </div>
+            <button id="run">Run</button>
+        </div>
+        <div id="codeContainer">
+            <div class="column" id="htmlContainer">
+                <p class="tag">HTML</p>
+                <textarea id="htmlCode">
+
+
+<button id="alert">Alert!</button>
+                </textarea>
+            </div>
+            <div class="column" id="cssContainer">
+                <p class="tag">CSS</p>
+                <textarea id="cssCode">
+
+button {
+    font-size: 1em;
+    color: red;
+    padding: .3em;
+    border-radius: 5px;
+}
+                </textarea>
+            </div>
+            <div class="column" id="jsContainer">
+                <p class="tag">JS</p>
+                <textarea id="jsCode">
+
+
+document.getElementById("alert").onclick = function() {
+    alert("Alert!");
+};
+                </textarea>
+            </div>
+            <div class="column" id="resultContainer">
+                <p class="tag">Result</p>
+                <iframe id="resultFrame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // jQueryUI for column-bar
+        $(function () {
+            $(".column-bar").controlgroup();
+            $("input").checkboxradio({
+                icon: false
+            });
+        });
+        // Toggle columns and set column width
+        $('.toggle').click(function () {
+            let id = $(this).attr("id");
+            $('#' + id + 'Container').toggleClass('hide');
+
+            let activeCols = $('.column').filter(function () {
+                return ($(this).css('display') != "none");
+            }).length;
+            let colWidth = 100 / activeCols;
+            $('.column').css("width", colWidth + "%");
+        });
+        // Set column height
+        let windowH = $(window).height();
+        let navbarH = $('#navbar').height();
+        let codeContainerH = windowH - navbarH;
+        $('#codeContainer').height(codeContainerH + "px");
+        // Run button action
+        $('#run').click(function () {
+            $('iframe').contents().find('html').html(
+                '<style type="text/css">' + $('#cssCode').val() + '</style>' +
+                $('#htmlCode').val()
+            );
+            document.getElementById("resultFrame").contentWindow.eval($('#jsCode').val());
+        });
+    </script>
+</body>
+
+</html>

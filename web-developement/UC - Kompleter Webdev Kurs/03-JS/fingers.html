@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h3>Guess the number</h3>
+    <span>From 1 to 5: <input id="inp" type="text"/> <button id="but">Guess</button></span>
+    <p id="answer"></p>
+
+    <script type="text/javascript">
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+      let random = getRandomInt(6);
+      console.log(random);
+      document.getElementById("but").onclick = function() {
+        let guess = document.getElementById("inp").value;
+        if(guess == random) {
+          document.getElementById("answer").innerHTML = "Bingo!" + "<p>" + " Let's play again..." + "</p>";
+          random = getRandomInt(6);
+          console.log(random);
+        } else {
+          document.getElementById("answer").innerHTML = "Sorry. Try again.";
+        }
+      }
+
+      let myar = [5, 10, 15, 14];
+      let average = myar.reduce((current, total, index, arr) => {
+        total += current;
+        if (index === arr.length - 1) {
+          return (total / arr.length);
+        } else {
+          return total;
+        }
+      });
+      document.getElementById("answer").innerHTML = average;
+    </script>
+  </body>
+</html>

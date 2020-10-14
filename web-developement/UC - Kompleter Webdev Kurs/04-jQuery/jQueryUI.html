@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQueryUI</title>
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <style>
+        #draggable {
+            width: 60px;
+            height: 20px;
+            background: #CCC;
+        }
+
+        #parent {
+            width: 400px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        #horizontal {
+            width: 70px;
+            background-color: lightblue;
+        }
+
+        #resizable {
+            width: 100px;
+            height: 50px;
+            padding: 0.2em;
+            background-color: lightgreen;
+        }
+
+        #droppable {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        #accordion {
+            width: 400px;
+        }
+
+        #sortable li {
+            margin-left: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="draggable">Drag me</div>
+        <div id="horizontal">Horizontal</div>
+        <div id="resizable">Resize me</div>
+        <div id="droppable">Drop draggable here</div>
+    </div>
+    <div id="accordion">
+        <h3>Shanghai</h3>
+        <p>Population: 24.281.400</p>
+        <h3>Beijing</h3>
+        <p>Population: 21.542.000</p>
+        <h3>Chongqing</h3>
+        <p>Population: 18.384.100</p>
+        <h3>Guangzhou</h3>
+        <p>Population: 11.547.491</p>
+        <h3>Shenzhen</h3>
+        <p>Population: 12.905.000</p>
+
+        <ol id="sortable">
+            <li>Drag me down</li>
+            <li>Shanghai</li>
+            <li>Beijing</li>
+            <li>Chongqing</li>
+            <li>Guangzhou</li>
+            <li>Shenzhen</li>
+        </ul>
+    </div>
+
+    <script>
+        $("#draggable").draggable({
+            containment: "parent"
+        });
+        $("#horizontal").draggable({
+            axis: "x",
+            containment: "parent"
+        });
+        $("#resizable").resizable({
+            resize: function(event, ui) {
+                if($(this).width() >= 393) {
+                    alert("It's too wide!");
+                }
+            },
+            containment: "parent"
+        });
+        $("#droppable").droppable({
+            drop: function(event, ui) {
+                $(this).css("background-color", "red");
+                $(this).html("Dropped!");
+            },
+            out: function(event, ui) {
+                $(this).css("background-color", "purple");
+                $(this).html("Drop draggable here");
+            }
+        });
+        $("#accordion").accordion();
+        $("#sortable").sortable();
+    </script>
+</body>
+
+</html>

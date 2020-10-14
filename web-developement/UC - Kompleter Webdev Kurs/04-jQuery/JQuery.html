@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery example</title>
+    <script src="jquery-3.5.0.min.js"></script>
+    <style type="text/css">
+      #circle, #circle2 {
+        background-color: red;
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        margin: 0.5em;
+      }
+
+      .square {
+        background-color: greenyellow;
+        width: 5em;
+        height: 5em;
+        margin: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <p></p>
+
+    <p id="mssg">This is a message</p>
+    <button id="message">Action!</button>
+
+    <div id="circle2"></div>
+
+    <script type="text/javascript">
+      /*if(typeof jQuery == undefined) {
+        alert("jQuery not linked");
+      } else {
+        alert("Hello jQuery!");
+      }*/
+      $("#circle").click(function(){
+        $("p").html("You clicked a circle");
+        $("#circle").attr("class", "square");
+        $("#circle").attr("id", "");
+      });
+      $(".square").click(function(){
+        $("p").html("You clicked a square");
+        $(".square").css("background-color", "aqua");
+        if($(this).attr("class") == "square") {
+          $(this).css("display", "none");
+        }
+      });
+      $("p").hover(function(){
+        $("p").css("color", "royalblue");
+      });
+      $("p").click(function(){
+        $("p").fadeOut("slow");
+      });
+      /*$("div").click(function(){
+        alert("You clicked a form");
+      });*/
+
+      let show = true;
+      $("#message").click(function(){
+        if(show) {
+          $("#mssg").fadeOut(3000, function(){
+          });
+        } else {
+          $("#mssg").fadeIn("slow");
+        }
+        show = !show;
+      });
+
+      $("#circle2").click(function(){
+        $(this).animate({
+          width: "7.5em",
+          height: "7.5em",
+          marginLeft: "100px",
+          marginTop: "100px",
+          borderRadius: "0%"
+        }, 2000, function(){
+          $(this).css("background-color", "yellow");
+        });
+      });
+
+      let regex = /Great/i;
+      regex = /e/g;
+      let text = "Regex is great!";
+      let result = text.match(regex);
+      alert(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input id="inp" type="text"/>
+    <button id="but">Print</button>
+    <p id="par"></p>
+
+    <script type="text/javascript">
+      var myar = new Array();
+      myar = ["Pizza", "Chocolate"];
+      myar.push("Chips");
+      console.log(myar);
+
+      document.getElementById("but").onclick = function() {
+        myar.push(document.getElementById("inp").value);
+        document.getElementById("par").innerHTML = myar;
+      }
+
+    </script>
+  </body>
+</html>

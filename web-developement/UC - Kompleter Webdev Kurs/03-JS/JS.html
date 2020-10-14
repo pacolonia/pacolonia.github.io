@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <style type="text/css">
+            #p4 p {
+                float: left;
+                min-width: 5em;
+                min-height: 5em;
+                border-radius: 50%;
+                margin-right: .5em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="hw">Hello world!</p>
+        <button id="myButton">Change text</button>
+
+        <p id="p2">Hello world!</p>
+        <button id="myB2">Add text</button>
+
+        <p id="p3">Hello world!</p>
+        <button id="myB3">Style text</button>
+
+        <div id="p4">
+            <p id="bc" style="background-color: blue;"></p>
+            <p id="rc" style="background-color: red;"></p>
+            <p id="yc" style="background-color: yellow;"></p>
+        </div>
+
+        <script type="text/javascript">
+            let text1 = "<h1>Hello Paco!</h1>";
+            let text2 = "Hello Paco!";
+            let pp = document.getElementById("p2").innerHTML;
+            let ppp = document.getElementById("p3").innerHTML;
+            let counter = 0;
+            let cntr = 0;
+            var cbc = 0;
+            var crc = 0;
+            var cyc = 0;
+            document.getElementById("myButton").onclick = function() {
+                let p = document.getElementById("hw").innerHTML;
+                document.getElementById("hw").innerHTML = text1;
+                text1 = p;
+            }
+            document.getElementById("myB2").onclick = function() {
+                if (counter % 2 == 0) {
+                    document.getElementById("p2").innerHTML = pp + " " + text2;
+                } else {
+                    document.getElementById("p2").innerHTML = pp;
+                }
+                counter = (counter % 2) + 1;
+            }
+            document.getElementById("myB3").onclick = function() {
+                if (cntr % 2 == 0) {
+                    document.getElementById("p3").style.color = "blue";
+                    document.getElementById("p3").style.fontSize = "20px";
+                } else {
+                    //document.getElementById("p2").innerHTML = ppp;
+                    document.getElementById("p3").style.color = "";
+                    document.getElementById("p3").style.fontSize = "";
+                }
+                cntr = (cntr % 2) + 1;
+            }
+            document.getElementById("bc").onclick = function() {
+                if (cbc % 2 == 0) {
+                    document.getElementById("bc").style.opacity = 0;
+                } else {
+                    document.getElementById("bc").style.opacity = 1;
+                }
+                cbc = (cbc % 2) + 1;
+            }
+            document.getElementById("rc").onclick = function() {
+                if (crc % 2 == 0) {
+                    document.getElementById("rc").style.opacity = 0;
+                } else {
+                    document.getElementById("rc").style.opacity = 1;
+                }
+                crc = (crc % 2) + 1;
+            }
+            document.getElementById("yc").onclick = function() {
+                if (cyc % 2 == 0) {
+                    document.getElementById("yc").style.opacity = 0;
+                } else {
+                    document.getElementById("yc").style.opacity = 1;
+                }
+                cyc = (cyc % 2) + 1;
+            }
+        </script>
+    </body>
+</html>
